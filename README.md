@@ -1,40 +1,63 @@
+<h1 align="center">
+    Buscador.ao
+</h1>
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/acidiney/buscador-ao">
+  	<img alt="Repository size" src="https://img.shields.io/github/repo-size/acidiney/buscador-ao">
+  	<a href="https://github.com/acidiney/buscador-ao/commits/master">
+    	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/acidiney/buscador-ao">
+  	</a>
+  	<a href="https://github.com/acidiney/buscador-ao/issues">
+    	<img alt="Repository issues" src="https://img.shields.io/github/issues/acidiney/buscador-ao">
+  	</a>
+  	<img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
+<p align="center">
+  <a href="#rocket-techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#avaliable-routes">Avaliable Routes</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-build-setup">How to Build Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-author">Author</a>
+</p>
+
+
+
+## :rocket: Techs
+
+Este projecto foi desenvolvido usando as seguintes tecnologias:
+
+- [Nestjs](https://nestjs.org)
+- [MongoDB](https://mongodb.com)
+
+## 💻 Project
+
+Ponto de obtenção de informações públicas
+
+## Avaliable Routes
+
+Rotas existentes no momento:
+
+- `nif/:nif` permite retornar informações de um nif.
+
+  ```json
+  {
+    "data": {
+      "_id": "5ec1bda72fe00d14dc81dc0a",
+      "nif": ":nif:",
+      "name": "Acidiney Alvaro  Carvalho Soares Dias",
+      "__v": 0
+    },
+    "source": "Buscador"
+  }
+  ```
+
   
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications, heavily inspired by <a href="https://angular.io" target="blank">Angular</a>.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/dm/@nestjs/core.svg" alt="NPM Downloads" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Travis" /></a>
-<a href="https://travis-ci.org/nestjs/nest"><img src="https://img.shields.io/travis/nestjs/nest/master.svg?label=linux" alt="Linux" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#5" alt="Coverage" /></a>
-<a href="https://gitter.im/nestjs/nestjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge"><img src="https://badges.gitter.im/nestjs/nestjs.svg" alt="Gitter" /></a>
-<a href="https://opencollective.com/nest#backer"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec"><img src="https://img.shields.io/badge/Donate-PayPal-dc3d53.svg"/></a>
-  <a href="https://twitter.com/nestframework"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
+## How to  Build Setup
 
 ```bash
 # development
@@ -45,11 +68,11 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
+​```
 
 ## Test
 
-```bash
+​```bash
 # unit tests
 $ npm run test
 
@@ -60,16 +83,19 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## 🤔 How to Contribute
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- Faça Fork deste repositório;
+- Crie sua branch com a sua funcionalidade: `git checkout -b my-feature`;
+- Commit suas mudanças: `git commit -m 'feat: my new feature'`;
+- Envie suas mudanças para o Githuh: `git push origin my-feature`.
 
-## Stay in touch
+Depois de feito merge da sua PR, pode apagar a branch!
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## :memo: License
 
-## License
+Este projecto está sobre licensa MIT. Verifique o arquivo [LICENSE](LICENSE) para mais informações.
 
-  Nest is [MIT licensed](LICENSE).
+## Author
+
+Acidiney Dias
