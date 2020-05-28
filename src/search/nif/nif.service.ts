@@ -3,20 +3,20 @@ import { Model } from 'mongoose';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose'
 
-import { INif } from './interfaces/nif.interface';
-import { ScrapperResponse } from './interfaces/scrapper.interface';
-import { FindedNifDTO, FontSource } from 'src/database/dto/find-nif.dto';
-import { CreateNifDTO } from 'src/database/dto/create-nif.dto';
-import { NifModel } from 'src/database/model/nif.model';
+import { INif } from '../interfaces/nif.interface';
+import { ScrapperResponse } from '../interfaces/scrapper.interface';
+import { FindedEntityDTO, FontSource } from '../../database/dto/find-entity.dto';
+import { CreateEntityDTO } from '../../database/dto/create-entity.dto';
+import { EntityModel } from '../../database/model/entity.model';
 
 
 
 @Injectable()
 export class NifService {
 
-    constructor(@InjectModel('nif') private nifModel: Model<NifModel>) {}
+    constructor(@InjectModel('entity') private EntityModel: Model<EntityModel>) {}
 
-    async findNif(nif: String): Promise<FindedNifDTO> {
+    async findNif(nif: String): Promise<FindedEntityDTO> {
         const localNif = await this.findLocal(nif)
         if (localNif) return { data: localNif, source: FontSource.local };
 
@@ -32,7 +32,7 @@ export class NifService {
     }
 
     findLocal(nif: String): Promise<INif> {
-        return this.nifModel.findOne({ nif }).exec();
+        return this.EntityModel.findOne({ nif }).exec();
     }
 
     async findByScrappingService(nif: String): Promise<ScrapperResponse> {
@@ -45,7 +45,7 @@ export class NifService {
         return entityData
     }
 
-    createNewEntityRecord(createNifDto: CreateNifDTO): Promise<INif> {
-        return this.nifModel.create(createNifDto);
+    createNewEntityRecord(CreateEntityDTO: CreateEntityDTO): Promise<INif> {
+        return this.EntityModel.create(CreateEntityDTO);
     }
 }

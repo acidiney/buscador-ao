@@ -1,4 +1,4 @@
-export class CreateNifDTO {
+export class CreateEntityDTO {
   name: String;
   nif: String;
 }

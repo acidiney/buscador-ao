@@ -4,19 +4,20 @@ import {
   Param,
   HttpException,
   HttpStatus,
+  UseInterceptors,
 } from '@nestjs/common';
-
-import { NifService } from './nif.service';
-import { FindedNifDTO } from '../database/dto/find-nif.dto';
-import { UseInterceptors } from '@nestjs/common';
 import { SentryInterceptor } from '../sentry.interceptor';
+
+import { NifService } from '../search/nif/nif.service';
+import { FindedEntityDTO } from '../database/dto/find-entity.dto';
+
 @UseInterceptors(SentryInterceptor)
 @Controller('nif')
 export class NifController {
   constructor(private _nifService: NifService) {}
 
   @Get('/:nif')
-  async findEntity(@Param('nif') nif: String): Promise<FindedNifDTO> {
+  async findEntity(@Param('nif') nif: String): Promise<FindedEntityDTO> {
     const finderResponse = await this._nifService.findNif(nif);
     if (!finderResponse.data)
       throw new HttpException(
