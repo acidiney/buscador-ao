@@ -24,6 +24,7 @@
     "@nestjs/core": "^6.10.14",
     "@nestjs/mongoose": "^7.0.1",
     "@nestjs/platform-express": "^6.10.14",
+    "@sentry/node": "5.15.5",
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.14",

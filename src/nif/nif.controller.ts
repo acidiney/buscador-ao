@@ -8,7 +8,9 @@ import {
 
 import { NifService } from './nif.service';
 import { FindedNifDTO } from '../database/dto/find-nif.dto';
-
+import { UseInterceptors } from '@nestjs/common';
+import { SentryInterceptor } from '../sentry.interceptor';
+@UseInterceptors(SentryInterceptor)
 @Controller('nif')
 export class NifController {
   constructor(private _nifService: NifService) {}
