@@ -8,17 +8,17 @@ import {
 } from '@nestjs/common';
 import { SentryInterceptor } from '../sentry.interceptor';
 
-import { NifService } from '../search/nif/nif.service';
 import { FindedEntityDTO } from '../database/dto/find-entity.dto';
+import { SearchService } from 'src/search/search.service';
 
 @UseInterceptors(SentryInterceptor)
 @Controller('nif')
 export class NifController {
-  constructor(private _nifService: NifService) {}
+  constructor(private _nifService: SearchService) {}
 
   @Get('/:nif')
   async findEntity(@Param('nif') nif: String): Promise<FindedEntityDTO> {
-    const finderResponse = await this._nifService.findNif(nif);
+    const finderResponse = await this._nifService.findEntity(nif);
     if (!finderResponse.data)
       throw new HttpException(
         {

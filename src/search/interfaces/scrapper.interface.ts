@@ -1,14 +1,12 @@
-import { INif } from "./nif.interface";
+interface ReturnObject {
+  cod: Number;
+  message: String;
+}
 
 export interface ScrapperResponse {
   retorno: ReturnObject;
   data: {
-    nif: String,
+    numero: String,
     nome: String
   };
-}
-
-interface ReturnObject {
-  cod: Number;
-  message: String;
 }

@@ -1,4 +1,7 @@
+import { EntityType } from "../schemas/entity.schema";
+
 export class CreateEntityDTO {
   name: String;
-  nif: String;
+  type: EntityType;
+  identifier: String;
 }

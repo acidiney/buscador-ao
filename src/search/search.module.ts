@@ -1,18 +1,17 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
-import { BiService } from './bi/bi.service';
 import { SearchController } from './search.controller';
-import { NifService } from './nif/nif.service';
 
 import { EntitySchema } from '../database/schemas/entity.schema';
+import { SearchService } from './search.service';
 
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: 'entity', schema: EntitySchema }]),
   ],
-  providers: [BiService, NifService],
+  providers: [SearchService],
   controllers: [SearchController],
-  exports: [NifService]
+  exports: [SearchService]
 })
 export class SearchModule {}
