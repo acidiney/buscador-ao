@@ -40,22 +40,59 @@ Ponto de obtenção de informações públicas - `https://buscador.ao`
 
 Rotas existentes no momento:
 
-- `nif/:nif` permite retornar informações de um nif.
+- [ deprecad ] `nif/:nif` permite retornar informações de um nif. ( No momento a rota exite, porém será eliminada posteriormente ).
 
   ```json
   {
     "data": {
-      "_id": "5ec1bda72fe00d14dc81dc0a",
       "nif": ":nif:",
       "name": "Acidiney Alvaro  Carvalho Soares Dias",
-      "__v": 0
     },
     "source": "Buscador"
   }
   ```
 
-  
+- [ NEW ] GET `search/document`, permite validar os documentos do tipo ['NIF', 'BI'].
+eg: 
 
+  - Para BI
+  ```js
+    axios.get('https://buscador.ao/search/document', {
+      type: 'BI',
+      number: 'número do BI a ser válidado'
+    })
+  ```
+
+  Isso deve retornar
+
+  ```js
+    {
+      "data": {
+          "name": "ACIDINEY ALVARO CARVALHO SOARES DIAS",
+          "bi": "meu-bi"
+      },
+      "source": "Buscador"
+    }
+  ```
+
+  - Para NIF 
+  ```js
+    axios.get('https://buscador.ao/search/document', {
+      type: 'NIF',
+      number: 'número do NIF a ser válidado'
+    })
+  ```
+
+  Isso deve retornar
+  ```js
+    {
+      "data": {
+          "name": "ACIDINEY ALVARO CARVALHO SOARES DIAS",
+          "nif": "meu-nif"
+      },
+      "source": "Buscador"
+    }
+  ```
 
 ## How to  Build Setup
 
