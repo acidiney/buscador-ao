@@ -52,7 +52,7 @@ Rotas existentes no momento:
   }
   ```
 
-- [ NEW ] GET `search/document`, permite validar os documentos do tipo ['NIF', 'BI'].
+- [ NEW ] GET `search/document`, permite validar os documentos do tipo ['NIF', 'BI']. ( esses campos devem ser enviados no body da requisição e usando JSON, caso queira testar pelo navegar recomendo usar no metodo acima )
 eg: 
 
   - Para BI
