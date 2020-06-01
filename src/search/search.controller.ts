@@ -1,7 +1,7 @@
 import {
   Controller,
   UseInterceptors,
-  Body,
+  Query,
   HttpException,
   HttpStatus,
   Get,
@@ -17,7 +17,7 @@ export class SearchController {
   constructor(private _searchService: SearchService) {}
 
   @Get('/document')
-  async findDocument(@Body() entity: FindDocument) {
+  async findDocument(@Query() entity: FindDocument) {
     const finderResponse = await this._searchService.findEntity(
       entity.number,
       entity.type
