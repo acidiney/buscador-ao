@@ -29,7 +29,7 @@
 
 Este projecto foi desenvolvido usando as seguintes tecnologias:
 
-- [Nestjs](https://nestjs.org)
+- [Nestjs](https://nestjs.com)
 - [MongoDB](https://mongodb.com)
 
 ## 💻 Project
