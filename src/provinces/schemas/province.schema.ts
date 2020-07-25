@@ -3,25 +3,25 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class Province extends Document {
-    @Prop({ required: true })
+    @Prop()
     name: string;
     
-    @Prop({ required: true })
+    @Prop()
     capital: string;
     
-    @Prop({ required: true })
+    @Prop()
     foundedAt: Date;
 
-    @Prop({ required: true })
+    @Prop()
     area;
 
-    @Prop({ required: true })
+    @Prop()
     phonePrefix: string;
 
     @Prop()
     website: string;
 
-    @Prop({ required: true, type: [String] })
+    @Prop([String])
     counties: string[];
 }
 
