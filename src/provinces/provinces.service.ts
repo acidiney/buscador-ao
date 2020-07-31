@@ -14,4 +14,10 @@ export class ProvincesService {
         .find()
         .exec();
     }
+
+    async insertMany(data: CreateProvinceDto []) {
+        return await this.provinceModel
+        
+        .insertMany(data);
+    }
 }
