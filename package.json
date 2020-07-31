@@ -29,6 +29,7 @@
     "@types/got": "^9.6.11",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
+    "class-validator": "^0.12.2",
     "dotenv": "^8.2.0",
     "got": "^11.1.4",
     "mongoose": "^5.9.14",
