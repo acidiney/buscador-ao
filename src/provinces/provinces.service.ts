@@ -15,12 +15,6 @@ export class ProvincesService {
         .exec();
     }
 
-    async insertMany(data: CreateProvinceDto []): Promise<CreateProvinceDto[]> {
-        return await this.provinceModel
-        
-        .insertMany(data);
-    }
-
     async findById(_id: string): Promise<CreateProvinceDto> {
         const province = await this.provinceModel.findOne({ _id });
 
