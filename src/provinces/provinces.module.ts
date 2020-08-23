@@ -14,6 +14,7 @@ import { ProvincesController } from './provinces.controller';
         ])
     ],
     providers: [ProvincesService],
-    controllers: [ProvincesController]
+    controllers: [ProvincesController],
+    exports: [ProvincesService, MongooseModule]
 })
 export class ProvincesModule {}
