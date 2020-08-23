@@ -8,7 +8,7 @@ export class CreateProvinceDto {
     readonly capital: string;
     
     @IsDate()
-    readonly foundedAt: Date;
+    readonly foundedAt: string;
 
     @IsString()
     readonly area: string;
