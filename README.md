@@ -40,7 +40,7 @@ Ponto de obtenção de informações públicas - `https://buscador.ao`
 
 Rotas existentes no momento:
 
-- [ deprecad ] `nif/:nif` permite retornar informações de um nif. ( No momento a rota exite, porém será eliminada posteriormente ).
+- [ deprecated ] `nif/:nif` permite retornar informações de um nif. ( No momento a rota existe, porém será eliminada posteriormente ).
 
   ```json
   {
@@ -52,8 +52,8 @@ Rotas existentes no momento:
   }
   ```
 
-- [ NEW ] GET `search/document`, permite validar os documentos do tipo ['NIF', 'BI']. ( esses parametros type e number devem ser enviados como query, caso queira testar pelo navegar recomendo usar no metodo acima )
-eg: 
+- [ NEW ] GET `search/document`, permite validar os documentos do tipo ['NIF', 'BI']. ( esses parametros `type` e `number` devem ser enviados como query, caso queira testar pelo navegar recomendo usar no metodo acima )
+eg:
 
   - Para BI
   ```js
@@ -75,7 +75,7 @@ eg:
     }
   ```
 
-  - Para NIF 
+  - Para NIF
   ```js
     axios.get('https://buscador.ao/search/document', {
       type: 'NIF',
