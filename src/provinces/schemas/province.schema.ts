@@ -3,17 +3,17 @@ import { Document } from 'mongoose';
 
 @Schema()
 export class Province extends Document {
-    @Prop()
+    @Prop({ unique: true })
     name: string;
     
     @Prop()
     capital: string;
     
     @Prop()
-    foundedAt: Date;
+    foundedAt: string;
 
     @Prop()
-    area;
+    area: string;
 
     @Prop()
     phonePrefix: string;
