@@ -36,4 +36,8 @@ export class ProvincesService {
 
         return province;
     }
+
+    async findByName(name: string) {
+        return await this.provinceModel.findOne({ name });
+    }
 }
