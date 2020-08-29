@@ -17,7 +17,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "seed": "ts-node -r tsconfig-paths/register src/seed.ts"
   },
   "dependencies": {
     "@nestjs/common": "^6.10.14",
@@ -29,6 +30,7 @@
     "@types/got": "^9.6.11",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3",
+    "class-validator": "^0.12.2",
     "dotenv": "^8.2.0",
     "got": "^11.1.4",
     "mongoose": "^5.9.14",
