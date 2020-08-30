@@ -3,6 +3,7 @@
 </h1>
 <p align="center">
     <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/acidiney/buscador-ao">
+    <a href="https://actions-badge.atrox.dev/acidiney/buscador-ao/goto"><img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Facidiney%2Fbuscador-ao%2Fbadge&style=flat" /></a>
   	<img alt="Repository size" src="https://img.shields.io/github/repo-size/acidiney/buscador-ao">
   	<a href="https://github.com/acidiney/buscador-ao/commits/master">
     	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/acidiney/buscador-ao">
