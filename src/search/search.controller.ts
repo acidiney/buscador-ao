@@ -1,17 +1,14 @@
 import {
   Controller,
-  UseInterceptors,
   Query,
   HttpException,
   HttpStatus,
   Get,
 } from '@nestjs/common';
 
-import { SentryInterceptor } from '../sentry.interceptor';
 import { FindDocument } from './interfaces/find-document.interface';
 import { SearchService } from './search.service';
 
-@UseInterceptors(SentryInterceptor)
 @Controller('search')
 export class SearchController {
   constructor(private _searchService: SearchService) {}

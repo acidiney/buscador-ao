@@ -4,14 +4,11 @@ import {
   Param,
   HttpException,
   HttpStatus,
-  UseInterceptors,
 } from '@nestjs/common';
-import { SentryInterceptor } from '../sentry.interceptor';
 
 import { FindedEntityDTO } from '../database/dto/find-entity.dto';
-import { SearchService } from 'src/search/search.service';
+import { SearchService } from '../search/search.service';
 
-@UseInterceptors(SentryInterceptor)
 @Controller('nif')
 export class NifController {
   constructor(private _nifService: SearchService) {}
