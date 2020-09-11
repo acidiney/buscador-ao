@@ -12,7 +12,7 @@ import { ScrapperResponse } from './interfaces/scrapper.interface';
 
 import { FindedEntityDTO, FontSource } from '../database/dto/find-entity.dto';
 
-import { EntityType } from 'src/database/schemas/entity.schema';
+import { EntityType } from '../database/schemas/entity.schema';
 
 @Injectable()
 export class SearchService {

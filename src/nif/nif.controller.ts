@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 
 import { FindedEntityDTO } from '../database/dto/find-entity.dto';
-import { SearchService } from 'src/search/search.service';
+import { SearchService } from '../search/search.service';
 
 @Controller('nif')
 export class NifController {
