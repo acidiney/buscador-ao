@@ -30,6 +30,7 @@
     "class-validator": "^0.12.2",
     "dotenv": "^8.2.0",
     "got": "^11.1.4",
+    "hbs": "^4.1.1",
     "mongoose": "^5.9.14",
     "newrelic": "^6.13.0",
     "reflect-metadata": "^0.1.13",
