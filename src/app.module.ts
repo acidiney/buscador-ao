@@ -1,19 +1,17 @@
 import { Module } from '@nestjs/common';
+
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { DatabaseModule } from './database/database.module';
-import { NifModule } from './nif/nif.module';
-import { ProvincesModule } from './provinces/provinces.module';
-import { SearchModule } from './search/search.module';
+
+import { SearchModule } from './app/modules/search.module';
+import { StatesModule } from './app/modules/states.module';
+import { DatabaseModule } from './resources/database/database.module';
 
 @Module({
   imports: [
     DatabaseModule,
-    NifModule,
     SearchModule,
-    ProvincesModule
+    StatesModule
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController]
 })
 export class AppModule {}
