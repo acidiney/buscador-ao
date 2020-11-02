@@ -5,15 +5,10 @@ import { EntityType } from "src/resources/database/schemas/entity.schema"
 
 @Controller("search")
 export class SearchController {
-  constructor(private _searchService: SearchService) {}
+  constructor(private readonly searchService: SearchService) {}
 
-  @Get("/nif/:nif")
-  findNif(@Param('nif') nif: string) {
-    return this._searchService.findOne(nif, EntityType.nif)
-  }
-  
-  @Get("/bi/:bi")
-  findBi(@Param('bi') bi: string) {
-    return this._searchService.findOne(bi, EntityType.bi)
+  @Get("/:type/:id")
+  findDocument(@Param('type') typeDocument: EntityType, @Param('id') id: string) {
+    return this.searchService.findOne(id, EntityType[typeDocument])
   }
 }

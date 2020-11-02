@@ -1,0 +1,7 @@
+@host = http://127.0.0.1:3002
+
+### 
+GET {{ host }}/provinces
+
+### Get a province by slug
+GET {{ host }}/provinces/luanda

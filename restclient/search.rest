@@ -1,0 +1,5 @@
+@host = http://127.0.0.1:3002
+@testDocument = 009457410LA044
+
+### 
+GET {{ host }}/search/nif/{{testDocument}}
